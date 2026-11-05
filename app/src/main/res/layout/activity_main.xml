@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/bg"
+  android:fitsSystemWindows="true"
+  android:orientation="vertical">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:clipToPadding="false">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:orientation="vertical"
+      android:paddingStart="24dp"
+      android:paddingTop="32dp"
+      android:paddingEnd="24dp"
+      android:paddingBottom="24dp">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/app_name"
+        android:textColor="@color/ink"
+        android:textSize="34sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/tagline"
+        android:textColor="@color/muted"
+        android:textSize="15sp" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+          android:id="@+id/status_dot"
+          android:layout_width="10dp"
+          android:layout_height="10dp"
+          android:background="@drawable/dot"
+          android:backgroundTint="@color/muted" />
+
+        <TextView
+          android:id="@+id/status_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:text="@string/status_idle"
+          android:textColor="@color/ink"
+          android:textSize="15sp" />
+      </LinearLayout>
+
+      <TextView
+        style="@style/OpenCast.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_destination" />
+
+      <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/platform_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+          android:id="@+id/platform_twitch"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Twitch" />
+
+        <Button
+          android:id="@+id/platform_kick"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Kick" />
+
+        <Button
+          android:id="@+id/platform_starvios"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Starvios" />
+
+        <Button
+          android:id="@+id/platform_custom"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Otro" />
+      </com.google.android.material.button.MaterialButtonToggleGroup>
+
+      <TextView
+        android:id="@+id/key_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/server_layout"
+        style="@style/OpenCast.Field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/hint_server">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/server_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textUri"
+          android:singleLine="true"
+          android:textColor="@color/ink" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/key_layout"
+        style="@style/OpenCast.Field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/hint_key"
+        app:endIconMode="password_toggle"
+        app:helperText="@string/key_private"
+        app:helperTextTextColor="@color/muted">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/key_input"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textPassword"
+          android:singleLine="true"
+          android:textColor="@color/ink" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <TextView
+        style="@style/OpenCast.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_quality" />
+
+      <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/quality_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+          android:id="@+id/quality_480"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="480p" />
+
+        <Button
+          android:id="@+id/quality_720"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="720p" />
+
+        <Button
+          android:id="@+id/quality_1080"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="1080p" />
+      </com.google.android.material.button.MaterialButtonToggleGroup>
+
+      <TextView
+        style="@style/OpenCast.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_audio" />
+
+      <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/audio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+          android:id="@+id/audio_mix"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/audio_mix" />
+
+        <Button
+          android:id="@+id/audio_mic"
+          style="@style/OpenCast.Toggle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/audio_mic" />
+      </com.google.android.material.button.MaterialButtonToggleGroup>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="serif"
+        android:lineSpacingMultiplier="1.25"
+        android:text="@string/tip_single_app"
+        android:textColor="@color/muted"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+    </LinearLayout>
+  </ScrollView>
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/go_live"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="20dp"
+    android:text="@string/go_live"
+    android:textColor="@color/live_button_text"
+    android:textSize="17sp"
+    app:backgroundTint="@color/live_button_bg"
+    app:cornerRadius="18dp" />
+</LinearLayout>

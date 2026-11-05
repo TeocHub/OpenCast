@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Theme.OpenCast" parent="Theme.Material3.Dark.NoActionBar">
+    <item name="colorPrimary">@color/accent</item>
+    <item name="colorOnPrimary">@color/on_accent</item>
+    <item name="colorSecondaryContainer">@color/accent</item>
+    <item name="colorOnSecondaryContainer">@color/on_accent</item>
+    <item name="colorSurface">@color/bg</item>
+    <item name="colorOnSurface">@color/ink</item>
+    <item name="colorOnSurfaceVariant">@color/muted</item>
+    <item name="colorOutline">@color/line</item>
+    <item name="colorError">@color/danger</item>
+    <item name="android:colorBackground">@color/bg</item>
+    <item name="android:statusBarColor">@color/bg</item>
+    <item name="android:navigationBarColor">@color/bg</item>
+  </style>
+
+  <style name="OpenCast.Label" parent="">
+    <item name="android:textColor">@color/muted</item>
+    <item name="android:textSize">13sp</item>
+    <item name="android:letterSpacing">0.04</item>
+    <item name="android:layout_marginTop">28dp</item>
+    <item name="android:layout_marginBottom">10dp</item>
+  </style>
+
+  <style name="OpenCast.Toggle" parent="Widget.Material3.Button.OutlinedButton">
+    <item name="android:textColor">@color/toggle_text</item>
+    <item name="backgroundTint">@color/toggle_bg</item>
+    <item name="strokeColor">@color/line</item>
+    <item name="android:insetTop">0dp</item>
+    <item name="android:insetBottom">0dp</item>
+    <item name="android:minHeight">48dp</item>
+  </style>
+
+  <style name="OpenCast.Field" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+    <item name="boxStrokeColor">@color/accent</item>
+    <item name="boxBackgroundColor">@color/surface</item>
+    <item name="hintTextColor">@color/accent</item>
+  </style>
+</resources>

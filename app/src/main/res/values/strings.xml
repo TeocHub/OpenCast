@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">OpenCast</string>
+  <string name="tagline">Transmite desde tu Android, sin complicaciones.</string>
+
+  <string name="label_destination">¿Dónde transmites?</string>
+  <string name="label_connection">Conexión</string>
+  <string name="label_quality">Calidad</string>
+  <string name="label_audio">Audio</string>
+
+  <string name="hint_server">Servidor (rtmp:// o rtmps://)</string>
+  <string name="hint_key">Clave de transmisión</string>
+  <string name="key_private">Tu clave queda cifrada en este dispositivo. No la compartas en directo.</string>
+
+  <string name="audio_mix">Juego + micrófono</string>
+  <string name="audio_mic">Solo micrófono</string>
+
+  <string name="tip_single_app">Al empezar, elige «Una sola app» y luego tu juego: así las notificaciones y el chat quedan fuera del directo.</string>
+
+  <string name="go_live">Salir en vivo</string>
+  <string name="end_live">Terminar directo</string>
+
+  <string name="status_idle">Fuera del aire</string>
+  <string name="status_connecting">Conectando…</string>
+  <string name="status_reconnecting">Se cortó la conexión, reintentando…</string>
+  <string name="status_live">En vivo · %1$s</string>
+  <string name="status_error">No se pudo transmitir: %1$s</string>
+
+  <string name="error_server_empty">Falta el servidor</string>
+  <string name="error_server_format">Debe empezar con rtmp:// o rtmps://</string>
+  <string name="error_key_empty">Falta la clave</string>
+  <string name="error_mic">OpenCast necesita el micrófono para transmitir tu voz.</string>
+  <string name="error_missing_data">faltan datos de la captura</string>
+  <string name="error_prepare">el dispositivo no aceptó esa calidad; prueba una más baja</string>
+  <string name="error_auth">la plataforma rechazó la clave</string>
+
+  <string name="notif_channel">Directo</string>
+  <string name="notif_connecting">Conectando…</string>
+  <string name="notif_live">Estás en vivo</string>
+  <string name="notif_reconnecting">Reconectando…</string>
+  <string name="action_end">Terminar</string>
+</resources>
